@@ -6,162 +6,320 @@
   <title>Portfolio Raslen Ziadi</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Hover sur projet */
-    .project:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: all 0.3s ease; }
+    body { scroll-behavior: smooth; }
+    .project:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.6); transition: all 0.3s ease; }
+    .section-title { border-bottom: 2px solid #3b82f6; display: inline-block; padding-bottom: 4px; }
+    .skill-bar-bg { background-color: #374151; border-radius: 9999px; height: 0.8rem; }
+    .skill-bar-fill { background-color: #3b82f6; height: 0.8rem; border-radius: 9999px; }
   </style>
 </head>
-<body class="bg-gray-50 font-sans text-gray-800">
+<body class="bg-gray-900 font-sans text-gray-200">
+
+<!-- Navigation fixe -->
+<nav class="fixed top-0 w-full bg-gray-800 text-white shadow p-4 z-50">
+  <ul class="flex justify-center space-x-6">
+    <li><a href="#apropos" class="hover:text-blue-400 transition">À propos</a></li>
+    <li><a href="#formation" class="hover:text-blue-400 transition">Formation</a></li>
+    <li><a href="#experiences" class="hover:text-blue-400 transition">Expériences</a></li>
+    <li><a href="#projets" class="hover:text-blue-400 transition">Projets</a></li>
+    <li><a href="#competences" class="hover:text-blue-400 transition">Compétences</a></li>
+    <li><a href="#contact" class="hover:text-blue-400 transition">Contact</a></li>
+  </ul>
+</nav>
 
 <!-- Header -->
-<header class="bg-blue-700 text-white p-6 text-center">
-  <h1 class="text-4xl font-bold">Raslen Ziadi</h1>
+<header class="bg-gray-800 text-white p-8 text-center mt-16">
+  <img src="assets/images/photo_professionnelle.jpg" alt="Raslen Ziadi" class="w-44 h-44 mx-auto rounded-full border-4 border-blue-400 mb-4 object-cover">
+  <h1 class="text-5xl font-bold">Raslen Ziadi</h1>
   <p class="mt-2 text-lg">Étudiant en Génie Électrique – Systèmes embarqués</p>
-  <p class="mt-1">
-    <a href="mailto:raslen.ziadi@enim.u-monastir.tn" class="underline">Email</a> |
-    <a href="https://www.linkedin.com/in/raslen-ziadi7" class="underline">LinkedIn</a>
+  <p class="mt-2 text-gray-300">
+    <a href="mailto:raslen.ziadi@enim.u-monastir.tn" class="underline text-blue-400">Email</a> |
+    <a href="https://www.linkedin.com/in/raslen-ziadi7" class="underline text-blue-400">LinkedIn</a> |
+    <a href="assets/pdf/CV_Raslen_Ziadi.pdf" class="underline text-blue-400" download>Télécharger CV</a>
   </p>
 </header>
 
 <main class="max-w-6xl mx-auto p-6">
 
+  <!-- Section À propos -->
+  <section id="apropos" class="mt-10 text-center">
+    <h2 class="text-3xl font-bold text-blue-400 mb-4 section-title">Profil</h2>
+    <p class="max-w-2xl mx-auto text-gray-300">
+      Étudiant en ingénierie passionné par les systèmes embarqués, Linux embarqué et le génie logiciel. Développement de
+      solides compétences en programmation C/C++/Python, microcontrôleurs STM32, systèmes temps réel et développement
+      Linux embarqué. Motivé et curieux, je m’investis dans la conception de solutions embarquées innovantes et robustes.
+    </p>
+    <p class="mt-4 text-gray-300">
+      📍 Monastir, Tunisie | 📞 +216 20 310 839 | ✉ raslen.ziadi@enim.u-monastir.tn
+    </p>
+  </section>
+
+  <!-- Section Formation -->
+  <section id="formation" class="mt-16">
+    <h2 class="text-3xl font-bold text-blue-400 mb-4 section-title">Formation</h2>
+    <ul class="space-y-3 text-gray-300">
+      <li>
+        <strong>ENIM – École Nationale d’Ingénieurs de Monastir</strong> — Génie électrique (2023 – Présent)
+      </li>
+      <li>
+        <strong>IPEIEM – Institut Préparatoire aux Études d’Ingénieurs d’El Manar</strong> — Physique & Chimie (2021 – 2023)
+      </li>
+    </ul>
+  </section>
+
+  <!-- Section Expériences -->
+  <section id="experiences" class="mt-16">
+    <h2 class="text-3xl font-bold text-blue-400 mb-4 section-title">Expériences</h2>
+    <div class="space-y-6 text-gray-300">
+      <div>
+        <h3 class="text-xl font-semibold text-blue-300">FABLAB ENIM, Monastir – Stage de perfectionnement (Juil. 2025 – Présent)</h3>
+        <p>Développement d’un prototype de surveillance énergétique de moteurs basé sur STM32. Création d’une distribution Linux Yocto pour Raspberry Pi 4.</p>
+        <p class="italic">Mots-clés : STM32, Capteurs, Yocto, Raspberry Pi, IoT, MQTT</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-blue-300">STEG Manzel Bouzelfa – Stage d’initiation (Juil. 2024 – Août 2024)</h3>
+        <p>Inspection et analyse des systèmes électriques industriels. Application des normes de sécurité industrielle.</p>
+        <p class="italic">Mots-clés : Électricité industrielle, Maintenance, Sécurité</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Section Projets -->
-  <section class="mt-10">
-    <h2 class="text-3xl font-bold text-blue-700 mb-6">Projets</h2>
+  <section id="projets" class="mt-16">
+    <h2 class="text-4xl font-bold text-blue-400 mb-10 text-center section-title">Projets Techniques</h2>
+    <div class="space-y-10">
 
-    <!-- Projet 1 -->
-    <div class="project bg-white shadow-lg rounded-lg p-6 mb-6 flex flex-col md:flex-row">
-      <img src="assets/images/3.png" alt="Surveillance énergétique" class="w-full md:w-1/2 rounded-lg">
-      <div class="md:ml-6 mt-4 md:mt-0">
-        <h3 class="text-2xl font-semibold text-blue-600">Surveillance énergétique (Yocto)</h3>
-        <p class="mt-2 font-medium text-gray-700">Technologies : STM32, Raspberry Pi 4, Yocto, MQTT, UART, Linux embarqué</p>
-        <p class="mt-2">Suivi en temps réel de la consommation énergétique d’un moteur via Raspberry Pi sous Yocto.</p>
-        <ul class="list-disc list-inside mt-2 text-gray-700">
-          <li>Construction d'une distribution Yocto personnalisée</li>
-          <li>Communication STM32 → Raspberry Pi via UART</li>
-          <li>Intégration MQTT pour transmission des données</li>
-          <li>Calibration et filtrage des capteurs</li>
-        </ul>
+      <!-- Projet 1 -->
+      <div class="project bg-gray-800 shadow-lg rounded-xl p-6 flex flex-col md:flex-row">
+        <img src="assets/images/3.png" alt="Surveillance énergétique" class="w-full md:w-1/2 rounded-xl mb-4 md:mb-0 object-cover">
+        <div class="md:ml-6 flex-1">
+          <h3 class="text-2xl font-semibold text-blue-400 mb-2">Surveillance énergétique (Yocto)</h3>
+          <p class="text-gray-300 italic mb-2">
+            Suivi en temps réel de la consommation énergétique d’un moteur et optimisation de son fonctionnement.
+          </p>
+          <p class="text-gray-300 mb-2">Technologies : STM32, Raspberry Pi 4, Yocto, MQTT, UART, Linux embarqué</p>
+          <ul class="list-disc list-inside text-gray-300 mb-2">
+            <li>Construction d'une distribution Yocto personnalisée</li>
+            <li>Communication STM32 → Raspberry Pi via UART</li>
+            <li>Intégration MQTT pour transmission des données</li>
+            <li>Calibration et filtrage des capteurs</li>
+          </ul>
+          <div class="flex space-x-4">
+            <a href="#" class="px-3 py-1 bg-blue-500 rounded hover:bg-blue-400 transition">Voir le code</a>
+            <a href="#" class="px-3 py-1 bg-blue-500 rounded hover:bg-blue-400 transition">Voir la démo</a>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <!-- Projet 2 -->
-    <div class="project bg-white shadow-lg rounded-lg p-6 mb-6 flex flex-col md:flex-row">
-      <img src="assets/images/4.png" alt="Système aide conduite" class="w-full md:w-1/2 rounded-lg">
-      <div class="md:ml-6 mt-4 md:mt-0">
-        <h3 class="text-2xl font-semibold text-blue-600">Système d’aide à la conduite</h3>
-        <p class="mt-2 font-medium text-gray-700">Technologies : STM32, LiDAR, GPS NEO-6M, SPI, UART</p>
-        <p class="mt-2">Module embarqué pour la détection d’obstacles et la localisation GPS.</p>
-        <ul class="list-disc list-inside mt-2 text-gray-700">
-          <li>Interfaçage du GPS (UART) et du LiDAR</li>
-          <li>Implémentation de filtres et fusion de données</li>
-          <li>Conception d’une interface graphique d’affichage</li>
-        </ul>
+      <!-- Projet 2 -->
+      <div class="project bg-gray-800 shadow-lg rounded-xl p-6 flex flex-col md:flex-row">
+        <img src="assets/images/4.png" alt="Système aide conduite" class="w-full md:w-1/2 rounded-xl mb-4 md:mb-0 object-cover">
+        <div class="md:ml-6 flex-1">
+          <h3 class="text-2xl font-semibold text-blue-400 mb-2">Système d’aide à la conduite</h3>
+          <p class="text-gray-300 italic mb-2">
+            Détection d’obstacles et localisation GPS pour un module embarqué autonome.
+          </p>
+          <p class="text-gray-300 mb-2">Technologies : STM32, LiDAR, GPS NEO-6M, SPI, UART</p>
+          <ul class="list-disc list-inside text-gray-300 mb-2">
+            <li>Interfaçage GPS (UART) et LiDAR</li>
+            <li>Implémentation de filtres et fusion de données</li>
+            <li>Conception d’une interface graphique d’affichage</li>
+          </ul>
+          <div class="flex space-x-4">
+            <a href="#" class="px-3 py-1 bg-blue-500 rounded hover:bg-blue-400 transition">Voir le code</a>
+            <a href="#" class="px-3 py-1 bg-blue-500 rounded hover:bg-blue-400 transition">Voir la démo</a>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <!-- Projet 3 -->
-    <div class="project bg-white shadow-lg rounded-lg p-6 mb-6 flex flex-col md:flex-row">
-      <img src="assets/images/2.png" alt="Robot autonome Eurobot" class="w-full md:w-1/2 rounded-lg">
-      <div class="md:ml-6 mt-4 md:mt-0">
-        <h3 class="text-2xl font-semibold text-blue-600">Robot autonome (Eurobot)</h3>
-        <p class="mt-2 font-medium text-gray-700">Technologies : STM32, ROS2, FreeRTOS, SPI, CAN</p>
-        <p class="mt-2">Robot autonome multi-capteurs pour compétition Eurobot.</p>
-        <ul class="list-disc list-inside mt-2 text-gray-700">
-          <li>Architecture STM32 + FreeRTOS</li>
-          <li>Intégration ROS2 pour planification</li>
-          <li>Mise en place des capteurs et odométrie</li>
-          <li>Bus CAN pour drivers moteurs</li>
-        </ul>
+      <!-- Projet 3 -->
+      <div class="project bg-gray-800 shadow-lg rounded-xl p-6 flex flex-col md:flex-row">
+        <img src="assets/images/2.png" alt="Robot autonome Eurobot" class="w-full md:w-1/2 rounded-xl mb-4 md:mb-0 object-cover">
+        <div class="md:ml-6 flex-1">
+          <h3 class="text-2xl font-semibold text-blue-400 mb-2">Robot autonome (Eurobot)</h3>
+          <p class="text-gray-300 italic mb-2">
+            Robot autonome multi-capteurs pour compétition Eurobot.
+          </p>
+          <p class="text-gray-300 mb-2">Technologies : STM32, ROS2, FreeRTOS, SPI, CAN</p>
+          <ul class="list-disc list-inside text-gray-300 mb-2">
+            <li>Architecture STM32 + FreeRTOS</li>
+            <li>Intégration ROS2 pour planification</li>
+            <li>Mise en place des capteurs et odométrie</li>
+            <li>Bus CAN pour drivers moteurs</li>
+          </ul>
+          <div class="flex space-x-4">
+            <a href="#" class="px-3 py-1 bg-blue-500 rounded hover:bg-blue-400 transition">Voir le code</a>
+            <a href="#" class="px-3 py-1 bg-blue-500 rounded hover:bg-blue-400 transition">Voir la démo</a>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <!-- Projet 4 -->
-    <div class="project bg-white shadow-lg rounded-lg p-6 mb-6 flex flex-col md:flex-row">
-      <img src="assets/images/projet.png" alt="Fusion de capteurs temps réel" class="w-full md:w-1/2 rounded-lg">
-      <div class="md:ml-6 mt-4 md:mt-0">
-        <h3 class="text-2xl font-semibold text-blue-600">Fusion de capteurs temps réel</h3>
-        <p class="mt-2 font-medium text-gray-700">Technologies : STM32, IMU, I2C/SPI, FreeRTOS, Kalman, Python</p>
-        <p class="mt-2">Système temps réel de fusion IMU avec filtrage Kalman.</p>
-        <ul class="list-disc list-inside mt-2 text-gray-700">
-          <li>Lecture haute fréquence IMU (FreeRTOS)</li>
-          <li>Filtre de Kalman optimisé</li>
-          <li>Transmission UART → Linux</li>
-          <li>Visualisation 3D avec Python</li>
-        </ul>
+      <!-- Projet 4 -->
+      <div class="project bg-gray-800 shadow-lg rounded-xl p-6 flex flex-col md:flex-row">
+        <img src="assets/images/projet.png" alt="Fusion capteurs" class="w-full md:w-1/2 rounded-xl mb-4 md:mb-0 object-cover">
+        <div class="md:ml-6 flex-1">
+          <h3 class="text-2xl font-semibold text-blue-400 mb-2">Fusion de capteurs temps réel</h3>
+          <p class="text-gray-300 italic mb-2">
+            Fusion temps réel IMU pour navigation précise.
+          </p>
+          <p class="text-gray-300 mb-2">Technologies : STM32, IMU, I2C/SPI, FreeRTOS, Kalman, Python</p>
+          <ul class="list-disc list-inside text-gray-300 mb-2">
+            <li>Lecture haute fréquence IMU (FreeRTOS)</li>
+            <li>Filtre de Kalman optimisé</li>
+            <li>Transmission UART → Linux</li>
+            <li>Visualisation 3D avec Python</li>
+          </ul>
+          <div class="flex space-x-4">
+            <a href="#" class="px-3 py-1 bg-blue-500 rounded hover:bg-blue-400 transition">Voir le code</a>
+            <a href="#" class="px-3 py-1 bg-blue-500 rounded hover:bg-blue-400 transition">Voir la démo</a>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <!-- Projet 5 -->
-    <div class="project bg-white shadow-lg rounded-lg p-6 mb-6 flex flex-col md:flex-row">
-      <img src="assets/images/1.png" alt="Armoire de commande" class="w-full md:w-1/2 rounded-lg">
-      <div class="md:ml-6 mt-4 md:mt-0">
-        <h3 class="text-2xl font-semibold text-blue-600">Armoire de commande électrique</h3>
-        <p class="mt-2 font-medium text-gray-700">Technologies : STM32H7, PWM, moteurs triphasés, TouchGFX</p>
-        <p class="mt-2">Armoire pour moteurs, vérins et actionneurs industriels.</p>
-        <ul class="list-disc list-inside mt-2 text-gray-700">
-          <li>Contrôle PWM des moteurs triphasés</li>
-          <li>Développement UI avec TouchGFX</li>
-          <li>Intégration dispositifs pneumatiques et électriques</li>
-          <li>Sécurisation thermique et électrique</li>
-        </ul>
+      <!-- Projet 5 -->
+      <div class="project bg-gray-800 shadow-lg rounded-xl p-6 flex flex-col md:flex-row">
+        <img src="assets/images/1.png" alt="Armoire de commande" class="w-full md:w-1/2 rounded-xl mb-4 md:mb-0 object-cover">
+        <div class="md:ml-6 flex-1">
+          <h3 class="text-2xl font-semibold text-blue-400 mb-2">Armoire électrique pilotée par STM32H7</h3>
+          <p class="text-gray-300 italic mb-2">
+            Contrôle complet d’une armoire industrielle pour moteurs et vérins.
+          </p>
+          <p class="text-gray-300 mb-2">Technologies : STM32H7, TouchGFX, PWM, moteurs triphasés</p>
+          <ul class="list-disc list-inside text-gray-300 mb-2">
+            <li>Contrôle PWM des moteurs triphasés</li>
+            <li>Développement UI avec TouchGFX</li>
+            <li>Intégration dispositifs pneumatiques et électriques</li>
+            <li>Sécurisation thermique et électrique</li>
+          </ul>
+          <div class="flex space-x-4">
+            <a href="#" class="px-3 py-1 bg-blue-500 rounded hover:bg-blue-400 transition">Voir le code</a>
+            <a href="#" class="px-3 py-1 bg-blue-500 rounded hover:bg-blue-400 transition">Voir la démo</a>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <!-- Projet 6 -->
-    <div class="project bg-white shadow-lg rounded-lg p-6 mb-6 flex flex-col md:flex-row">
-      <img src="assets/images/yocto.png" alt="Système IoT embarqué" class="w-full md:w-1/2 rounded-lg">
-      <div class="md:ml-6 mt-4 md:mt-0">
-        <h3 class="text-2xl font-semibold text-blue-600">Système IoT embarqué multi-capteurs (Yocto)</h3>
-        <p class="mt-2 font-medium text-gray-700">Technologies : STM32, Yocto Linux, MQTT, Python, QEMU, IoT, Supervision industrielle</p>
-        <p class="mt-2">Surveillance en temps réel de plusieurs capteurs industriels via Yocto Linux et MQTT.</p>
-        <ul class="list-disc list-inside mt-2 text-gray-700">
-          <li>Acquisition de données depuis divers capteurs STM32</li>
-          <li>Déploiement d’une distribution Yocto Linux personnalisée</li>
-          <li>Transmission en temps réel via MQTT</li>
-          <li>Supervision industrielle avec alarmes et enregistrement des données</li>
-          <li>Simulation via QEMU sans matériel physique</li>
-          <li>Visualisation des données avec Python</li>
-        </ul>
+      <!-- Projet 6 -->
+      <div class="project bg-gray-800 shadow-lg rounded-xl p-6 flex flex-col md:flex-row">
+        <img src="assets/images/yocto.png" alt="IoT embarqué multi-capteurs" class="w-full md:w-1/2 rounded-xl mb-4 md:mb-0 object-cover">
+        <div class="md:ml-6 flex-1">
+          <h3 class="text-2xl font-semibold text-blue-400 mb-2">Système IoT embarqué multi-capteurs</h3>
+          <p class="text-gray-300 italic mb-2">
+            Supervision temps réel via MQTT, alarmes et enregistrement des données.
+          </p>
+          <p class="text-gray-300 mb-2">Technologies : STM32, Yocto Linux, MQTT, Python, QEMU, Supervision industrielle</p>
+          <ul class="list-disc list-inside text-gray-300 mb-2">
+            <li>Acquisition de données depuis divers capteurs STM32</li>
+            <li>Distribution Yocto Linux personnalisée</li>
+            <li>Transmission temps réel via MQTT</li>
+            <li>Supervision avec alarmes et visualisation Python</li>
+            <li>Simulation via QEMU sans matériel physique</li>
+          </ul>
+          <div class="flex space-x-4">
+            <a href="#" class="px-3 py-1 bg-blue-500 rounded hover:bg-blue-400 transition">Voir le code</a>
+            <a href="#" class="px-3 py-1 bg-blue-500 rounded hover:bg-blue-400 transition">Voir la démo</a>
+          </div>
+        </div>
       </div>
-    </div>
 
+    </div>
   </section>
 
   <!-- Section Compétences -->
-  <section class="mt-10">
-    <h2 class="text-3xl font-bold text-blue-700 mb-6">Compétences</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-white shadow-lg rounded-lg p-4 text-center">
-        <h4 class="font-semibold text-lg">STM32</h4>
-        <div class="w-full bg-gray-200 rounded-full h-4 mt-2">
-          <div class="bg-blue-600 h-4 rounded-full" style="width: 90%"></div>
-        </div>
+  <section id="competences" class="mt-16">
+    <h2 class="text-3xl font-bold text-blue-400 mb-6 section-title text-center">Compétences Techniques</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-300">
+
+      <div>
+        <h4 class="font-semibold text-lg mb-1">Programmation</h4>
+        <p>C, C++, Python, Shell scripting</p>
       </div>
-      <div class="bg-white shadow-lg rounded-lg p-4 text-center">
-        <h4 class="font-semibold text-lg">Python</h4>
-        <div class="w-full bg-gray-200 rounded-full h-4 mt-2">
-          <div class="bg-blue-600 h-4 rounded-full" style="width: 85%"></div>
-        </div>
+
+      <div>
+        <h4 class="font-semibold text-lg mb-1">Systèmes embarqués</h4>
+        <p>STM32 (HAL/LL), ARM Cortex-M, FreeRTOS, Interfaçage capteurs/actionneurs</p>
       </div>
-      <div class="bg-white shadow-lg rounded-lg p-4 text-center">
-        <h4 class="font-semibold text-lg">Yocto Linux</h4>
-        <div class="w-full bg-gray-200 rounded-full h-4 mt-2">
-          <div class="bg-blue-600 h-4 rounded-full" style="width: 80%"></div>
-        </div>
+
+      <div>
+        <h4 class="font-semibold text-lg mb-1">Linux embarqué</h4>
+        <p>Yocto, Linux-RT, Shell, QEMU</p>
       </div>
-      <!-- Ajouter d'autres compétences -->
+
+      <div>
+        <h4 class="font-semibold text-lg mb-1">Communication & Protocoles</h4>
+        <p>UART, SPI, I2C, CAN, MQTT, LoRaWAN</p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-lg mb-1">Outils</h4>
+        <p>STM32CubeIDE, STM32CubeMX, VS Code, Simulink, Qt</p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-lg mb-1">Matériel & Capteurs</h4>
+        <p>Raspberry Pi, GPS, LiDAR, IMU</p>
+      </div>
+
     </div>
-  </section>
+
+    <!-- Section Activités Associatives -->
+<section id="activites" class="mt-16">
+  <h2 class="text-3xl font-bold text-blue-400 mb-6 text-center section-title">Activités Associatives</h2>
+  
+  <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+    <div class="md:flex md:items-center md:space-x-6">
+      <!-- Texte -->
+      <div class="md:flex-1 text-gray-300">
+        <h3 class="text-xl font-semibold mb-2">Club Robotique ING.ENIM – Président</h3>
+        <p>Juin 2024 – Juin 2025</p>
+        <p class="mt-2">
+          Organisation d’événements, encadrement technique et animation de formations en systèmes embarqués et robotique.
+        </p>
+        <p class="mt-2 font-semibold text-blue-400">Mots-clés : Leadership, Gestion technique, Organisation</p>
+      </div>
+
+      <!-- Photos -->
+      <div class="md:flex-1 mt-4 md:mt-0 grid grid-cols-2 gap-4">
+        <img src="assets/images/activite1.jpg" alt="Club Robotique Photo 1" class="w-full h-40 object-cover rounded shadow-md">
+        <img src="assets/images/activite2.jpg" alt="Club Robotique Photo 2" class="w-full h-40 object-cover rounded shadow-md">
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- Contact -->
-  <section class="mt-10 text-center">
-    <h2 class="text-3xl font-bold text-blue-700 mb-4">Contact</h2>
-    <p>Pour toute question ou opportunité, contactez-moi par <a href="mailto:raslen.ziadi@enim.u-monastir.tn" class="underline text-blue-600">email</a>.</p>
+  <section id="contact" class="mt-16 text-center">
+    <h2 class="text-3xl font-bold text-blue-400 mb-4 section-title">Contact</h2>
+    <p>Pour toute question ou opportunité, contactez-moi par <a href="mailto:raslen.ziadi@enim.u-monastir.tn" class="underline text-blue-400">email</a>.</p>
+    <p class="mt-2">
+      <a href="https://github.com/raslenziadi" class="underline text-blue-400">GitHub</a> |
+      <a href="https://www.linkedin.com/in/raslen-ziadi7" class="underline text-blue-400">LinkedIn</a>
+    </p>
   </section>
-
+<!-- Section Certificats -->
+<section id="certificats" class="mt-16">
+  <h2 class="text-3xl font-bold text-blue-400 mb-6 text-center section-title">Certificats</h2>
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+    <div class="bg-gray-800 rounded-xl p-4 shadow-lg">
+      <img src="assets/images/cert_linux.png" alt="Certificat Linux" class="w-full h-48 object-contain mb-2 rounded">
+      <h3 class="text-lg font-semibold text-blue-400">Linux embarqué</h3>
+    </div>
+    <div class="bg-gray-800 rounded-xl p-4 shadow-lg">
+      <img src="assets/images/cert_rtos.png" alt="Certificat RTOS" class="w-full h-48 object-contain mb-2 rounded">
+      <h3 class="text-lg font-semibold text-blue-400">RTOS</h3>
+    </div>
+    <div class="bg-gray-800 rounded-xl p-4 shadow-lg">
+      <img src="assets/images/cert_csharp.png" alt="Certificat C#" class="w-full h-48 object-contain mb-2 rounded">
+      <h3 class="text-lg font-semibold text-blue-400">C#</h3>
+    </div>
+    <div class="bg-gray-800 rounded-xl p-4 shadow-lg">
+      <img src="assets/images/cert_president.png" alt="Certificat Président Club" class="w-full h-48 object-contain mb-2 rounded">
+      <h3 class="text-lg font-semibold text-blue-400">Président Club Robotique</h3>
+    </div>
+  </div>
+</section>
 </main>
 
-<footer class="bg-blue-700 text-white text-center p-4 mt-10">
+<footer class="bg-gray-800 text-white text-center p-4 mt-10">
   &copy; 2026 Raslen Ziadi - Tous droits réservés
 </footer>
 
